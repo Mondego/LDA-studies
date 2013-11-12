@@ -1,0 +1,8 @@
+apache-ant-1.6.0,101512,906,79
+apache-ant-1.7.0,120263,1113,84
+apache-ant-1.8.0,130790,1173,85
+jakarta-ant-1.1,10133,87,55
+jakarta-ant-1.2,19391,171,58
+jakarta-ant-1.3,34598,385,60
+jakarta-ant-1.4,45243,425,65
+jakarta-ant-1.5,74930,716,75
