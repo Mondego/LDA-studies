@@ -26,13 +26,10 @@ Note: the following bash code are in mallet/script directory. Do not use any tut
 eg. create "version-major.txt" in ant/ 
 NOTE: DO NOT CREATE IN ant/LDA DIRECTORY. Sample file is attached in samplehelper. The versions in "version-major.txt" are the selected versions for each project that you are going to do perplexity analysis in next step 3. You do not need to do perplexity for each version, just pick 3 or 4 major versions that are representative, usually the early version, mid point version and latest version.
 
-3. change output path of your own in code. run calculate-perplexity.sh. You can get perplexity result in /LDA file of each version that you specify in step 2. This result is used to pick out the best number of topics for each version of project to run LDA in step 5. Roughly infer the best topic # when the perplexity value is at turning point. You may not be accurate since best topic number is somewhere in a range. Then use extraplolation/ intrapolation on topic number based on LOC of versions in same project. (you can do it in R or Matlab)
-
-e.g. for hadoop project, you may have 10 versions, you run perplexity on version 1, 5 and 10, then get 3 topic numbers for these 3 versions, finally infter 2,3,4,6,7,8,9 versions based on LOC.
+3. change output path of your own in code. run calculate-perplexity.sh. You can get perplexity result in /LDA file of each version that you specify in step 2. This result is used to pick out the best number of topics for each version of project to run LDA in step 5. Roughly infer the best topic # when the perplexity value is at turning point. You may not be accurate since best topic number is somewhere in a range. Then use extraplolation/ intrapolation on topic number based on LOC of versions in same project. (you can do it in R or Matlab) e.g. for hadoop project, you may have 10 versions, you run perplexity on version 1, 5 and 10, then get 3 topic numbers for these 3 versions, finally infter 2,3,4,6,7,8,9 versions based on LOC.
 
 4. create "version.txt". sample file is attached in samplehelper.
 first col is version name, second col is LOC (can get by tool in Mallet/LOCtool), third col is file number (very important, make this number very accurate, DO NOT USE LOC TOOL), fourth col is best topic # that you got in step 3.
-
 How to get file number accurate? The answer is to directly count how many files in mallet file. I wrote a bash code to generate  this information. Run countFile.sh to get the filenumber of each version for each project. Then fill the exact filenumber information in "version.txt".
 
 5. Once optimal number of topics for each version is known, and you make sure information in version.txt is complete and accurate, run run-LDA.sh script to output sparse word-doc matrix for each version. Sample result is attached in samlplehelper directory. 
