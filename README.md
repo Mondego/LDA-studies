@@ -46,10 +46,12 @@ after generate topic-document result, run moveMallet.sh to move all valuable fil
 Matlab analysis:
 put all the matlab codes in the path that you designated (e.g. I use LDAtarget/, put all matlab codes in LDAtarget/)
  
-1. run gen_project_topicdoc_tangling_scattering to import DP.txt to readable topic-doc mat file for each project and calculate average scattering/tangling for each project and store the result to mat files
+1. run gen_project_topicdoc_tangling_scattering to import DP.txt/topic-key.txt/filename.txt to readable topic-doc mat file for each project and calculate average scattering/tangling for each project and store the result to mat files
 
 2. run gen_project_plot to generate tangling/ scattering plot for each project
 
 3. run gen_plot_all_scattering/tangling to generate scattering plot for all versions of all files
+
+4. run writefile to produce xls file of all the results. The file is stored in /datatable subdirectory for each project.
 
 All the data are automatically stored in current directory. Make modifications on code if necessary when you want to include/ exclude the projects you want to analyze.
