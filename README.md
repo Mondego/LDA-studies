@@ -55,3 +55,6 @@ put all the matlab codes in the path that you designated (e.g. I use LDAtarget/,
 4. run writefile to produce xls file of all the results. The file is stored in /datatable subdirectory for each project.
 
 All the data are automatically stored in current directory. Make modifications on code if necessary when you want to include/ exclude the projects you want to analyze.
+
+Note: 
+in xls, you may find some tangling value is 0. This is because there is only one topic in that file so Entropy = log(1) = 0. Means the file is completely determined by that single topic
