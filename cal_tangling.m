@@ -35,7 +35,7 @@ repmat_weight = repmat(Eachdoccount,1,ntopic);
 topicdoc = topicdoc./repmat_weight;
 topicdoc(isnan(topicdoc))=0; % change NAN value to zero
 
-% calculate scattering
+% calculate tangling
 tangling = zeros(1, ndoc);
 for i=1:size(topicdoc,1)
     for j=1:size(topicdoc,2)
